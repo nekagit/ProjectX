@@ -4,7 +4,7 @@ Jede Funktion ist nur als Stub angelegt und soll von euch implementiert
 werden. Nutzt Docstring und Parameternamen als Leitplanke. Schreibt sauberen,
 getesteten Code und haltet euch an PEP 8.
 """
-
+"""
 from typing import Any, Optional
 
 
@@ -521,8 +521,7 @@ def aufgabe_085_erste_wiederholung(werte: list[Any]) -> Optional[Any]:
 # Gruppe: Sinan, Viktor, Martin
 def aufgabe_086_ist_sortiert(werte: list[int]) -> bool:
     """Prüfe, ob die Liste nicht-absteigend sortiert ist."""
-    pass
-
+    return werte == sorted(werte)
 
 # Gruppe: Sinan, Viktor, Martin
 def aufgabe_087_bubble_sort(werte: list[int]) -> list[int]:
@@ -600,10 +599,15 @@ def aufgabe_098_extract_domain(url: str) -> str:
 def aufgabe_099_parse_kv(text: str) -> dict[str, str]:
     """Parse einen Text wie 'a=1;b=2' in ein Dict."""
     pass
-
+"""
 
 # Gruppe: Sinan, Viktor, Martin
 def aufgabe_100_teile_in_abschnitte(text: str, breite: int) -> list[str]:
     """Zerlege einen Text in Abschnitte fester Breite."""
-    pass
+
+    def aufgabe_100_teile_in_abschnitte(text: str, breite: int) -> list[str]:
+        """Zerlege einen Text in Abschnitte fester Breite."""
+        if breite <= 0:
+            return []
+        return [text[i:i + breite] for i in range(0, len(text), breite)]
 
