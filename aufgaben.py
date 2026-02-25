@@ -527,7 +527,15 @@ def aufgabe_086_ist_sortiert(werte: list[int]) -> bool:
 # Gruppe: Sinan, Viktor, Martin
 def aufgabe_087_bubble_sort(werte: list[int]) -> list[int]:
     """Sortiere die Liste mit Bubble-Sort und gib eine neue Liste zurück."""
-    pass
+    neue_liste = werte.copy()
+
+    n = len(neue_liste)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if neue_liste[j] > neue_liste[j + 1]:
+                neue_liste[j], neue_liste[j + 1] = neue_liste[j + 1], neue_liste[j]
+
+    return neue_liste
 
 
 # Gruppe: Sinan, Viktor, Martin
