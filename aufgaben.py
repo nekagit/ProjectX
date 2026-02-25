@@ -431,7 +431,7 @@ def aufgabe_070_summenliste(werte: list[int]) -> list[int]:
 # Gruppe: Torben, Nikit, Yannic, Malte
 def aufgabe_071_zip_to_dict(keys: list[str], values: list[int]) -> dict[str, int]:
     """Baue ein Dict aus Schlüsseln und Werten gleicher Länge."""
-    pass
+    return dict(zip(keys, values))
 
 
 # Gruppe: Torben, Nikit, Yannic, Malte
