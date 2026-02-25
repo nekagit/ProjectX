@@ -41,37 +41,45 @@ def aufgabe_005_zu_kleinbuchstaben(text: str) -> str:
 # Gruppe: Arne, Alina, Philipp
 def aufgabe_006_capitalize_saetze(text: str) -> str:
     """Setze den ersten Buchstaben jedes Satzes auf Großbuchstaben."""
-    pass
+    sentences = text.split(".")
+    capitalized_text = ""
+    for sentence in sentences:
+        if sentence:
+            capitalized_text += sentence.strip().capitalize() + ". "
+    return capitalized_text
 
 
 # Gruppe: Arne, Alina, Philipp
 def aufgabe_007_ersetze_zeichen(text: str, alt: str, neu: str) -> str:
     """Ersetze alle Vorkommen von alt durch neu in text."""
-    pass
+    return text.replace("alt", "neu")
 
 
 # Gruppe: Arne, Alina, Philipp
 def aufgabe_008_zaehle_wort(text: str, wort: str) -> int:
     """Zähle, wie oft wort im Text vorkommt (wortgenau)."""
-    pass
+    return text.count(wort)
 
 
 # Gruppe: Arne, Alina, Philipp
 def aufgabe_009_kuerze_text(text: str, limit: int) -> str:
     """Schneide den Text nach limit Zeichen ab und füge '...' an, falls nötig."""
-    pass
+    if len(text) <= limit:
+        return text
+    else:
+        return text[:limit] + "..."
 
 
 # Gruppe: Arne, Alina, Philipp
 def aufgabe_010_teile_worte(text: str) -> list[str]:
     """Zerlege einen Satz in Wörter, getrennt nach Leerzeichen."""
-    pass
+    return text.split(" ")
 
 
 # Gruppe: Arne, Alina, Philipp
 def aufgabe_011_verbinde_worte(worte: list[str], trenner: str = ", ") -> str:
     """Verbinde Wörter mit dem angegebenen Trenner zu einem String."""
-    pass
+    return f"{trenner}".join(worte)
 
 
 # Gruppe: Arne, Alina, Philipp
