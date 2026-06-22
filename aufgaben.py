@@ -131,19 +131,20 @@ def aufgabe_020_sortiere_aufsteigend(zahlen: list[int]) -> list[int]:
 # Gruppe: Tobbyte, DuclosNgassa
 def aufgabe_021_sortiere_absteigend(zahlen: list[int]) -> list[int]:
     """Gib eine neue Liste mit absteigend sortierten Zahlen zurück."""
-    pass
+    zahlen.sort(reverse=True)
+    return zahlen
 
 
 # Gruppe: Tobbyte, DuclosNgassa
 def aufgabe_022_filter_gerade(zahlen: list[int]) -> list[int]:
     """Filtere alle geraden Zahlen aus der Liste."""
-    pass
+    return [num % 2 == 0 for num in zahlen]
 
 
 # Gruppe: Tobbyte, DuclosNgassa
 def aufgabe_023_filter_ungerade(zahlen: list[int]) -> list[int]:
     """Filtere alle ungeraden Zahlen aus der Liste."""
-    pass
+    return [num % 2 != 0 for num in zahlen]
 
 
 # Gruppe: Tobbyte, DuclosNgassa
@@ -197,7 +198,8 @@ def aufgabe_031_merge_lists(a: list[int], b: list[int]) -> list[int]:
 # Gruppe: Tobbyte, DuclosNgassa
 def aufgabe_032_remove_none(werte: list[Optional[int]]) -> list[int]:
     """Entferne alle None-Werte aus der Liste."""
-    pass
+    return [item for item in werte if item is not None]
+
 
 
 # Gruppe: Tobbyte, DuclosNgassa
@@ -497,13 +499,20 @@ def aufgabe_081_filter_worte_laenge(worte: list[str], minimum: int) -> list[str]
 # Gruppe: binudio1, iSayaGen
 def aufgabe_082_join_ohne_letztes(worte: list[str]) -> str:
     """Verbinde Wörter mit Komma, ersetze das letzte Komma durch ' und '."""
-    pass
+    return worte[0] if len(worte) == 1 else ", ".join(worte[:-1]) + " und " + worte[-1] if worte else ""
 
 
 # Gruppe: binudio1, iSayaGen
 def aufgabe_083_count_characters_ignore_case(text: str) -> dict[str, int]:
     """Zähle Zeichenhäufigkeiten ohne zwischen Groß/Klein zu unterscheiden."""
-    pass
+    text = text.lower()
+    result: dict[str, int] = {}
+    for char in text:
+        if char in result:
+            result[char] += 1
+        else:
+            result[char] = 1
+    return result
 
 
 # Gruppe: binudio1, iSayaGen
@@ -606,4 +615,3 @@ def aufgabe_099_parse_kv(text: str) -> dict[str, str]:
 def aufgabe_100_teile_in_abschnitte(text: str, breite: int) -> list[str]:
     """Zerlege einen Text in Abschnitte fester Breite."""
     pass
-
