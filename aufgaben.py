@@ -240,14 +240,27 @@ def aufgabe_038_invert_dict(data: dict[str, str]) -> dict[str, str]:
 
 # Gruppe: Harangason, ThorKel1202
 def aufgabe_039_merge_dicts(a: dict[str, Any], b: dict[str, Any]) -> dict[str, Any]:
-    """Führe zwei Dicts zusammen, b überschreibt a bei Konflikten."""
-    pass
+    """
+    Führt zwei Dictionarys zusammen(b überschreibt a bei Konflikten).
+    Input: 2 Dicts Output: 1 Dict
+    """
+    ergebnis = a | b
+    return ergebnis
 
 
 # Gruppe: Harangason, ThorKel1202
 def aufgabe_040_count_letters(text: str) -> dict[str, int]:
-    """Zähle, wie oft jeder Buchstabe im Text vorkommt (case-insensitive)."""
-    pass
+    """
+    Zählt, wie oft jeder Buchstabe im Text vorkommt (case-insensitive).
+    Input: Str Output: Dict
+    """
+    dict = {}
+    for char in text.lower():
+        if char in dict:
+            dict[char] += 1
+        else:
+            dict[char] = 1
+    return dict
 
 
 # Gruppe: Harangason, ThorKel1202
