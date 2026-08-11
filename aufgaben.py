@@ -17,7 +17,7 @@ def aufgabe_001_spiegle_text(text: str) -> str:
 # Gruppe: dbudb, lindaEbbert
 def aufgabe_002_zaehle_vokale(text: str) -> int:
     """Zähle die Anzahl der Vokale im Text (a, e, i, o, u)."""
-    pass
+    return sum(1 for zeichen in text.lower() if zeichen in "aeiou")
 
 
 # Gruppe: dbudb, lindaEbbert
